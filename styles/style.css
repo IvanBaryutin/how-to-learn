@@ -25,7 +25,7 @@
   background-image: url("../images/logo_place_header.svg");
 }
 
-.logo__place_header{
+.logo_place_header{
   position:absolute;
   height: 32px;
   top: 30px;
@@ -33,7 +33,7 @@
   display: block;
 }
 
-.header__heading{
+.header__title{
   font-size: 102px;
   line-height: 96px;
   margin: 0;
@@ -45,6 +45,7 @@
 }
 
 .header__subtitle{
+  margin: 0;
   position: absolute;
   width: 388px;
   bottom: 30px;
@@ -61,17 +62,17 @@
   text-decoration: none;
 }
 
-.blue{
+/*.blue{
   color:#2f80ed;
-}
+}*/
 .white{
   color: #f2f2f2;
   text-decoration: none;
 }
 
-.flex{
+/*.flex{
   display: flex;
-}
+}*/
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -94,9 +95,9 @@
   z-index: 1;
 }
 
-.content{
+/*.content{
 
-}
+}*/
 
 .description{
   margin: 100px auto;
@@ -199,7 +200,7 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .table__text:last-of-type{
@@ -226,7 +227,7 @@
   padding-top: 100px;
 }
 
-.feynman__title_heading{
+.feynman__title{
   padding: 0;
   line-height: 1.15;
   font-size: 120px;

@@ -1,3 +1,13 @@
+@keyframes spin {
+  100%{
+    transform:rotate(360deg);
+  }
+}
+.rotate{
+  animation:spin 20s linear infinite;
+  /*https://stackoverflow.com/questions/16771225/css3-rotate-animation*/
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -18,6 +28,7 @@
   /* выше установили ограничения для секции */
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .logo{
@@ -85,6 +96,10 @@
   background-color: #2f80ed;
 }
 
+.rotation{
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+}
+
 .header__main-illustration {
   height: 608px;
   width: 765px;
@@ -107,9 +122,88 @@
   justify-content:center;
 }
 
+.techniques{
+  margin: 100px auto;
+  width: 80%;
+  display: block;
+  background-color: bisque;
+}
+
+.cards{
+  width: 920px;
+  margin: 0 auto 90px;
+  display: flex;
+  xjustify-content: space-between;
+  flex-wrap: wrap;
+  xalign-items: flex-start;
+  background-color: aquamarine;
+}
+
+.cards__item{
+  display: block;
+  width: 240px;
+  margin-top: 60px;
+  text-align: center;
+  margin-right: 100px;
+  background-color: #2f80ed;
+}
+.cards__item:nth-child(3n){
+  margin-right: 0px;
+}
+
+.cards__image{
+  width: 160px;
+  height: 160px;
+  margin: 0 40px;
+  border-radius: 50%;
+}
+
+.cards__title{
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 43px 0 16px;
+}
+
+.cards__description{
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0
+}
+
+.video{
+  margin: 100px auto -50px;
+  display: block;
+  xposition: relative;
+}
+
+.video__iframes{
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  xlex-wrap: wrap;
+  margin: 0 auto;
+  background-color: coral;
+  xposition: absolute;
+  xbottom: -50px;
+}
+
+.oakley{
+  background-color: #f2f2f2;
+  xwidth: 80%;
+  display: flex;
+  justify-content: center;
+}
+
 .two-columns{
   display: flex;
   justify-content: space-between;
+}
+
+.two-columns_size_l{
+  width: 80%;
+  padding-top: 160px;
 }
 
 .two-columns__brief{
@@ -256,6 +350,94 @@
   color:#2f80ed;
   text-decoration: none;
 }
+
+.disappear:hover{
+  opacity: .4;
+  transition: opacity 1s linear;
+}
+
+.khan{
+  background-color: #f2f2f2;
+}
+
+.khan__container{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 105px;
+}
+
+.khan__author{
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.khan__title{
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.khan__quote-author{
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.khan__quote-author-subline{
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 10px 0 68px;
+}
+
+.khan__book-container{
+  display: flex;
+}
+
+.khan__buy-link{
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  vertical-align: top;
+  xdisplay: block;
+}
+
+.khan__book-pic{
+  margin-right: 48px;
+  width: 620px;
+  height: 608px;
+  background-image: url(../images/khan-book.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  xdisplay: block;
+
+}
+
+.khan__quote{
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 790px;
+  margin: 50px 0 36px;
+}
+
+
+.resources__logo-zone{
+  width: 1100px;
+  margin: 80px auto 217px;
+}
+
+.resources__logo{
+  width: 270px;
+  height: 38px;
+}
+
 
 .kaufman{
   display: block;

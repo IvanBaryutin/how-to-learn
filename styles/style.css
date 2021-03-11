@@ -8,6 +8,10 @@
   /*https://stackoverflow.com/questions/16771225/css3-rotate-animation*/
 }
 
+/*.rotation{
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+}*/
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -73,18 +77,10 @@
   text-decoration: none;
 }
 
-/*.blue{
-  color:#2f80ed;
-}*/
-
 .white{
   color: #f2f2f2;
   text-decoration: none;
 }
-
-/*.flex{
-  display: flex;
-}*/
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -94,10 +90,6 @@
   right:0px;
   top: 64px;
   background-color: #2f80ed;
-}
-
-.rotation{
-  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 }
 
 .header__main-illustration {
@@ -116,37 +108,63 @@
 }*/
 
 .description{
-  margin: 100px auto;
+  margin: 0 auto;
+  padding-top: 100px;
   width: 80%;
   display: flex;
   justify-content:center;
 }
 
+.section-title{
+  font-size: 60px;
+  color: #000;
+  line-height: 1.15;
+  font-weight: bold;
+  padding: 0;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.section-title_theme_dark{
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.section-subtitle{
+  line-height: 34px;
+  font-size: 24px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-subtitle_theme_dark{
+  color: white;
+}
+
 .techniques{
-  margin: 100px auto;
+  margin: 0 auto;
+  padding-top: 100px;
   width: 80%;
   display: block;
-  background-color: bisque;
 }
 
 .cards{
   width: 920px;
-  margin: 0 auto 90px;
+  margin: 0 auto;
   display: flex;
-  xjustify-content: space-between;
   flex-wrap: wrap;
-  xalign-items: flex-start;
-  background-color: aquamarine;
 }
 
 .cards__item{
-  display: block;
   width: 240px;
   margin-top: 60px;
   text-align: center;
   margin-right: 100px;
-  background-color: #2f80ed;
 }
+
 .cards__item:nth-child(3n){
   margin-right: 0px;
 }
@@ -173,20 +191,17 @@
 }
 
 .video{
-  margin: 100px auto -50px;
+  margin: 0 auto -50px;
+  padding-top: 100px;
   display: block;
-  xposition: relative;
 }
 
 .video__iframes{
   width: 1050px;
   display: flex;
   justify-content: space-between;
-  xlex-wrap: wrap;
   margin: 0 auto;
-  background-color: coral;
-  xposition: absolute;
-  xbottom: -50px;
+  padding-top: 50px;
 }
 
 .oakley{
@@ -194,6 +209,7 @@
   xwidth: 80%;
   display: flex;
   justify-content: center;
+  padding-top: 160px;
 }
 
 .two-columns{
@@ -203,7 +219,6 @@
 
 .two-columns_size_l{
   width: 80%;
-  padding-top: 160px;
 }
 
 .two-columns__brief{
@@ -240,38 +255,9 @@
   font-weight: bold;
 }
 
-.section-title{
-  font-size: 60px;
-  color: #000;
-  line-height: 1.15;
-  font-weight: bold;
-  padding: 0;
-  width: 60%;
-  text-align: center;
-  margin: 0 auto 20px;
-}
-
-.section-title_theme_dark{
-  color: white;
-  z-index: 2;
-  position: relative;
-}
-
-.section-subtitle{
-  line-height: 34px;
-  font-size: 24px;
-  width: 60%;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.section-subtitle_theme_dark{
-  color: white;
-}
-
 .table{
   width: 1100px;
-  margin: 0 auto 90px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;
@@ -319,7 +305,7 @@
   background-position: left bottom;
   background-repeat: no-repeat;
   min-height: 790px;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .feynman__title{
@@ -356,14 +342,19 @@
   transition: opacity 1s linear;
 }
 
+
+.digits{
+  padding: 100px 0;
+}
+
 .khan{
   background-color: #f2f2f2;
+  padding-top: 105px;
 }
 
 .khan__container{
   width: 80%;
   margin: 0 auto;
-  padding-top: 105px;
 }
 
 .khan__author{
@@ -427,26 +418,15 @@
   margin: 50px 0 36px;
 }
 
-
-.resources__logo-zone{
-  width: 1100px;
-  margin: 80px auto 217px;
-}
-
-.resources__logo{
-  width: 270px;
-  height: 38px;
-}
-
-
 .kaufman{
   display: block;
-  padding: 90px 0 0 0;
+  padding: 90px 0;
   margin: 0 auto;
   background-color: #1f1f1f;
   overflow: hidden;
   position: relative;
 }
+
 .kaufman__triangle{
   position: absolute;
   top: 0;
@@ -456,6 +436,20 @@
   background-image: url(../images/kaufman-triangle.svg);
   background-size: cover;
   z-index: 1;
+}
+
+.resources{
+  padding: 100px 0 217px;
+}
+
+.resources__logo-zone{
+  width: 1100px;
+  margin: 80px auto 0;
+}
+
+.resources__logo{
+  width: 270px;
+  height: 38px;
 }
 
 .footer{

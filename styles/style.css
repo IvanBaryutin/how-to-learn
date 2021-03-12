@@ -5,12 +5,7 @@
 }
 .rotate{
   animation:spin 20s linear infinite;
-  /*https://stackoverflow.com/questions/16771225/css3-rotate-animation*/
 }
-
-/*.rotation{
-  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-}*/
 
 .page {
   min-width: 1100px;
@@ -206,7 +201,6 @@
 
 .oakley{
   background-color: #f2f2f2;
-  xwidth: 80%;
   display: flex;
   justify-content: center;
   padding-top: 160px;
